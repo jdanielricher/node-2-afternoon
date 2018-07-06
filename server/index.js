@@ -6,7 +6,7 @@ const products_controller = require('./products_controller');
 
 const app = express();
 app.use(bodyParser.json);
-massiive(process.env.CONNECTION_STRING).then(dbInstance => {
+massive(process.env.CONNECTION_STRING).then(dbInstance => {
     app.search('db', dbInstance)
 }).catch(err => console.log(err));
 
